@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>lighthouse_functions module &#8212; Lighthouse 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="Lighthouse" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lighthouse_functions">
+<span id="lighthouse-functions-module"></span><h1>lighthouse_functions module<a class="headerlink" href="#module-lighthouse_functions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lighthouse-functions-py">
+<h2>lighthouse_functions.py<a class="headerlink" href="#lighthouse-functions-py" title="Permalink to this headline">¶</a></h2>
+<p>Modul lighthouse_functions obsahuje funkce potrebne v main.py.</p>
+<dl class="function">
+<dt id="lighthouse_functions.bounds_coord">
+<code class="sig-prename descclassname">lighthouse_functions.</code><code class="sig-name descname">bounds_coord</code><span class="sig-paren">(</span><em class="sig-param">lkhd</em><span class="sig-paren">)</span><a class="headerlink" href="#lighthouse_functions.bounds_coord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Najde souradnice krajnich hodnot intervaloveho odhadu minima.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lighthouse_functions.compute_prior">
+<code class="sig-prename descclassname">lighthouse_functions.</code><code class="sig-name descname">compute_prior</code><span class="sig-paren">(</span><em class="sig-param">a_mean</em>, <em class="sig-param">a_spread</em>, <em class="sig-param">b_mean</em>, <em class="sig-param">b_spread</em><span class="sig-paren">)</span><a class="headerlink" href="#lighthouse_functions.compute_prior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Z parametru 1D priornich rozdeleni vytvori 2D priorni rozdeleni
+typu np.array.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lighthouse_functions.create_plot">
+<code class="sig-prename descclassname">lighthouse_functions.</code><code class="sig-name descname">create_plot</code><span class="sig-paren">(</span><em class="sig-param">lkhd</em><span class="sig-paren">)</span><a class="headerlink" href="#lighthouse_functions.create_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vykresli graf, kde na ose x je poloha majaku podel pobrezi
+a na ose y poloha majaku smerem do more. Zelene jsou vrstevnice
+verohodnostni funkce s vertikalnim rozestupem 2. Cervene poloha
+majaku, ktera slouzila k vygenerovani dat. Zeleny bod ukazuje
+odhadnutou polohu. Nejmensi vrstevnice odpovida intervalovemu
+odhadu polohy.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lighthouse_functions.input_prior_parameters">
+<code class="sig-prename descclassname">lighthouse_functions.</code><code class="sig-name descname">input_prior_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lighthouse_functions.input_prior_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nacte od uzivatele parametry priornich rozdeleni
+a pocet zablesku majaku. Vrati n-tici hodnot.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lighthouse_functions.min_coord">
+<code class="sig-prename descclassname">lighthouse_functions.</code><code class="sig-name descname">min_coord</code><span class="sig-paren">(</span><em class="sig-param">lkhd</em><span class="sig-paren">)</span><a class="headerlink" href="#lighthouse_functions.min_coord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Najde souradnice minima funkce L.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lighthouse_functions.post_likelihood">
+<code class="sig-prename descclassname">lighthouse_functions.</code><code class="sig-name descname">post_likelihood</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lighthouse_functions.post_likelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Z predem zadanych hodnota a vstupu uzivatele vypocita
+posteriorni verohodnost typu np.array.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="lighthouse_functions.report">
+<code class="sig-prename descclassname">lighthouse_functions.</code><code class="sig-name descname">report</code><span class="sig-paren">(</span><em class="sig-param">lkhd</em><span class="sig-paren">)</span><a class="headerlink" href="#lighthouse_functions.report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vypise intervalove a bodove odhady a vrati je jako seznam.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lighthouse</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Lighthouse</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">lighthouse_functions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lighthouse-functions-py">lighthouse_functions.py</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_lighthouse_pytest.html">test_lighthouse_pytest module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Lighthouse</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">Lighthouse</a></li>
+      <li>Next: <a href="main.html" title="next chapter">main module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Radek Galabov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/lighthouse_functions.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
