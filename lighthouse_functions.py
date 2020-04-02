@@ -167,3 +167,36 @@ def report(lkhd):
         beta[ind[0]], np.amin(beta[maxmin[0, :]]), np.amax(beta[maxmin[0, :]])))
     return [np.amin(alfa[maxmin[1, :]]), alfa[ind[1]], np.amax(alfa[maxmin[1, :]]),
             np.amin(beta[maxmin[0, :]]), beta[ind[0]], np.amax(beta[maxmin[0, :]])]
+
+if __name__ == '__main__':    
+    from io import StringIO
+    import pytest
+
+    def test_input_prior_parameters(monkeypatch):
+        prior_test_inputs = StringIO('-11\n-2\n20\n-4\n30\n')
+        monkeypatch.setattr('sys.stdin', prior_test_inputs)
+        with pytest.raises(Exception):
+            input_prior_parameters()
+
+
+    def test_input_number_of_samples(monkeypatch):
+        prior_test_input = StringIO('1\n1\n1\n1\n1.3\n')
+        monkeypatch.setattr('sys.stdin', prior_test_input)
+        with pytest.raises(Exception):
+            input_prior_parameters()
+
+
+    def test_compute_prior():
+        compute_prior_test = (5, 2, 0.7, 1)
+        prior = compute_prior(*compute_prior_test)
+        sum_of_distribution = np.sum(prior)
+        assert np.isclose(sum_of_distribution, 1)
+
+
+    def test_bounds_and_min(monkeypatch):
+        prior_test_input = StringIO('1\n1\n1\n1\n30\n')
+        monkeypatch.setattr('sys.stdin', prior_test_input)
+        lkhd = post_likelihood()
+        estimates = report(lkhd)
+        assert estimates[0] <= estimates[1] <= estimates[2]
+        assert estimates[3] <= estimates[4] <= estimates[5]
